@@ -1,0 +1,32 @@
+<div class="card shadow" *ngIf="viewList">
+    <h5 class="card-header">My Todo List</h5>
+    <div class="card-body">
+        <ul class="list-group" *ngFor="let todo of todoService.todoList">
+
+            <app-todo [todoInput]="todo"></app-todo>
+
+        </ul>
+    </div>
+</div>
+
+<div class="card shadow" *ngIf="complete">
+    <h5 class="card-header">My Todo List</h5>
+    <div class="card-body">
+        <ul class="list-group" *ngFor="let todo of todoService.complete">
+
+            <app-todo [todoInput]="todo"></app-todo>
+
+        </ul>
+    </div>
+</div>
+
+<div class="card shadow" *ngIf="incomplete">
+    <h5 class="card-header">My Todo List</h5>
+    <div class="card-body">
+        <ul class="list-group" *ngFor="let todo of todoService.incomplete">
+
+            <app-todo [todoInput]="todo"></app-todo>
+
+        </ul>
+    </div>
+</div>
